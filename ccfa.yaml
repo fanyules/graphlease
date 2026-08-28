@@ -8,9 +8,9 @@ target_venue:
   year: "TBD"
   mode: "experiment_only"
 stage:
-  current: "stopped_g0m_no_portfolio_lifecycle"
-  gate: "G0"
-  updated_at: "2026-08-28"
+  current: "independent_gl_s0_scale_transfer_resource_audit"
+  gate: "GL-S0"
+  updated_at: "2026-08-29"
 artifacts:
   protocol: "docs/G0_PROTOCOL.md"
   config: "configs/g0.json"
@@ -28,6 +28,9 @@ claims:
   - id: "GL-C3"
     text: "Staggered replica lifecycle changes can be masked by a warm heterogeneous island."
     status: "not_tested_stopped_before_G0L"
+  - id: "GL-S0-C0"
+    text: "The same logical graph portfolio has scale-dependent or runtime-dependent physical resource cost at Qwen3-14B TP4."
+    status: "prospective_not_tested"
 experiments:
   - id: "G0-P"
     purpose: "A100 and 910B TP1 plan-invariance and observability vertical slice"
@@ -38,3 +41,6 @@ experiments:
   - id: "G0-L"
     purpose: "Conditional restart-gap and warm-island masking replay"
     status: "not_run_stopped_on_G0-M"
+  - id: "GL-S0"
+    purpose: "Independent Qwen3-14B TP4 graph-entry and device-resource scale audit"
+    status: "protocol_defined_not_run"

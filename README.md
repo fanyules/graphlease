@@ -17,9 +17,16 @@ failed to find a stable phase-dependent optimum, meaningful portfolio scarcity,
 or a static-to-oracle gap. GraphLease is stopped and G0-L was not run. See
 `docs/G0P_REPORT.md` and `docs/G0M_REPORT.md`.
 
+An independent resource-only scale-transfer probe, GL-S0, keeps that failure
+unchanged while testing whether the original 60-size union becomes physically
+scarce for Qwen3-14B TP4. It issues no requests and cannot restore the
+GraphLease controller claim. See `docs/GL_S0_PROTOCOL.md` and
+`configs/gl_s0.json`.
+
 Local checks:
 
 ```bash
 python -m unittest discover -s tests -v
 python scripts/freeze_g0.py --output /tmp/graphlease-freeze.json
+python scripts/freeze_gl_s0.py --output /tmp/gl-s0-freeze.json
 ```

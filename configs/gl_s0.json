@@ -1,0 +1,82 @@
+{
+  "schema": "graphlease.gl_s0.v1",
+  "project": "GraphLease",
+  "gate": "GL-S0",
+  "evidence_scope": "independent resource-only scale-transfer probe; not paper evidence and not a reinterpretation of G0-M",
+  "frozen_negative": {
+    "gate": "G0-M",
+    "commit": "93435649eedcacc14130b445157a26a0c1b4e891",
+    "status": "failed_no_stable_phase_optimum_no_scarcity_no_oracle_gap"
+  },
+  "held_out_prediction_basis": {
+    "model": "Qwen3-1.7B-BF16",
+    "platform": "910b",
+    "default_capture_size_count": 19,
+    "default_acl_wrapper_count": 30,
+    "default_acl_graph_entry_count": 570,
+    "union_capture_size_count": 60,
+    "union_acl_wrapper_count": 30,
+    "union_acl_graph_entry_count": 1796
+  },
+  "model": {
+    "asset_id": "Qwen3-14B-BF16",
+    "deployed_path": "/data/models/qwen/Qwen3-14B-BF16",
+    "config_sha256": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+    "dtype": "bfloat16",
+    "num_hidden_layers": 40
+  },
+  "platforms": {
+    "a100": {
+      "tensor_parallel_size": 4,
+      "physical_devices": [0, 1, 2, 3],
+      "required_path_prefix": "/root/miniconda3/envs/qwen36-shard/bin",
+      "runtime": "vllm-0.23.0-cuda",
+      "additional_config": {}
+    },
+    "910b": {
+      "tensor_parallel_size": 4,
+      "physical_devices": [0, 1, 2, 3],
+      "runtime": "vllm-0.23.0+vllm-ascend-0.23.0rc1",
+      "additional_config": {
+        "enable_cpu_binding": true,
+        "enable_flashcomm1": false
+      }
+    }
+  },
+  "engine": {
+    "max_model_len": 768,
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 4096,
+    "gpu_memory_utilization": 0.8,
+    "enable_prefix_caching": false,
+    "async_scheduling": false,
+    "engine_core_multiprocessing": false,
+    "seed": 2026082901
+  },
+  "portfolios": {
+    "default": {
+      "capture_sizes": null
+    },
+    "coverage_union": {
+      "capture_sizes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 160, 192, 224, 256]
+    }
+  },
+  "execution": {
+    "fresh_processes_per_platform_portfolio": 3,
+    "workload_requests": 0,
+    "controller_enabled": false,
+    "router_enabled": false,
+    "network_hot_path_enabled": false
+  },
+  "thresholds": {
+    "kv_capacity_loss_fraction_min": 0.03,
+    "reserved_memory_increase_bytes_min": 536870912,
+    "resource_constraint_restarts_min": 2,
+    "startup_only_relative_increase_min": 0.10,
+    "confirmed_ascend_resource_markers": [
+      "207008",
+      "insufficient_stream_resources",
+      "stream resources are insufficient"
+    ]
+  }
+}
