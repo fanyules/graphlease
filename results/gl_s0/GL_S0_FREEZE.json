@@ -1,0 +1,45 @@
+{
+  "config_path": "configs/gl_s0.json",
+  "config_sha256": "978bf67893d8d691085a13dc6fa74d55dd78583835034b933f32b85fd67b512c",
+  "controller_unblocked": false,
+  "created_at": "2026-08-28T16:51:06.902914+00:00",
+  "frozen_negative": {
+    "commit": "93435649eedcacc14130b445157a26a0c1b4e891",
+    "gate": "G0-M",
+    "status": "failed_no_stable_phase_optimum_no_scarcity_no_oracle_gap"
+  },
+  "held_out_prediction_basis": {
+    "default_acl_graph_entry_count": 570,
+    "default_acl_wrapper_count": 30,
+    "default_capture_size_count": 19,
+    "model": "Qwen3-1.7B-BF16",
+    "platform": "910b",
+    "union_acl_graph_entry_count": 1796,
+    "union_acl_wrapper_count": 30,
+    "union_capture_size_count": 60
+  },
+  "matrix": {
+    "fresh_processes_per_cell": 3,
+    "platforms": [
+      "a100",
+      "910b"
+    ],
+    "portfolios": [
+      "default",
+      "coverage_union"
+    ],
+    "total_processes": 12
+  },
+  "pre_output_repository_commit": "459e94077c7fe2fefe271513edaeb94827a97336",
+  "protocol_path": "docs/GL_S0_PROTOCOL.md",
+  "protocol_sha256": "fa1e044e86ef75e768b267788e5fec1f31fbd81626894cb4e714028d58980199",
+  "router_unblocked": false,
+  "schema": "graphlease.gl_s0.freeze.v1",
+  "source_sha256": {
+    "scripts/adjudicate_gl_s0.py": "4303cc971ed2c333b7f1beb6bf77242a03a522cedbee03c7d6ec06e1e3652ea0",
+    "scripts/run_gl_s0.py": "7f462c897cfb47f9394d436902235e271f4eb29042cf1be9b715dd5b23edd852",
+    "src/graphlease/gl_s0.py": "f68b85fce48c16223af9d3c664bbc503d8d448cea01c07ace68e7d58164e7cfd"
+  },
+  "status": "frozen",
+  "workload_unblocked": false
+}
