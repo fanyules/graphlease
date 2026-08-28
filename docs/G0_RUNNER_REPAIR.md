@@ -15,6 +15,12 @@ and no Gate-admissible row.
   the same prompts, greedy sampling, seeds, scheduler, and model execution while
   making TTFT observable.
 
+The same public raw-prompt path returns an internal suffixed ID from
+`add_request()` while streamed `RequestOutput.request_id` retains the caller ID.
+The driver therefore keys request timing by the caller ID. Both forms were
+observed directly in the retained failed artifacts; no scheduler behavior was
+changed.
+
 No workload trace, capture size, threshold, model, runtime, or device changed.
 The failed attempts remain under `results/g0/attempts/` and cannot enter any Gate
 metric. A new canonical freeze must precede the repaired preflight.

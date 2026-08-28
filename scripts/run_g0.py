@@ -374,13 +374,14 @@ def run_wave(
     for position, prompt in enumerate(prompts(concurrency, prompt_tokens, pool)):
         request_id = f"graphlease-{REQUEST_COUNTER}"
         REQUEST_COUNTER += 1
-        request_ids.append(
-            llm.llm_engine.add_request(
-                request_id,
-                prompt,
-                sampling_params(output_tokens, seed + position),
-            )
+        llm.llm_engine.add_request(
+            request_id,
+            prompt,
+            sampling_params(output_tokens, seed + position),
         )
+        # The raw-prompt input processor returns an internal suffixed ID, while
+        # streamed RequestOutput objects preserve the caller-provided ID.
+        request_ids.append(request_id)
     positions = {str(request_id): index for index, request_id in enumerate(request_ids)}
     first_token_ns: dict[str, int] = {}
     finished_ns: dict[str, int] = {}
