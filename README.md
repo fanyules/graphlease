@@ -23,6 +23,12 @@ scarce for Qwen3-14B TP4. It issues no requests and cannot restore the
 GraphLease controller claim. See `docs/GL_S0_PROTOCOL.md` and
 `configs/gl_s0.json`.
 
+GL-S0 completed with a cross-runtime resource asymmetry: A100 captured the
+60-size union in 3/3 processes, while 910B failed 3/3 times at the same ACL
+SQ/CQ allocation boundary (`stream_id=1984`). The frozen automated classifier
+did not register error code `207005`, so its technical-invalid verdict is
+retained alongside a separate semantic audit. See `docs/GL_S0_REPORT.md`.
+
 Local checks:
 
 ```bash

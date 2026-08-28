@@ -1,0 +1,49 @@
+{
+  "schema": "graphlease.gl_s0.semantic_audit.v1",
+  "status": "resource_mechanism_observed_with_frozen_classifier_contract_defect",
+  "old_g0m_status_unchanged": true,
+  "graphlease_controller_restored": false,
+  "frozen_automated_verdict": "technical_invalid_or_unregistered_union_failure",
+  "frozen_classifier_gap": {
+    "registered_error_code": "207008",
+    "observed_error_code": "207005",
+    "observed_resource_markers": [
+      "Failed to apply for memory",
+      "Alloc sq cq fail",
+      "resource alloc fail",
+      "stream_id=1984"
+    ],
+    "adjudicator_modified_after_output": false
+  },
+  "a100": {
+    "default_successes": 3,
+    "union_successes": 3,
+    "default_effective_capture_sizes": 35,
+    "union_effective_capture_sizes": 60,
+    "default_captured_entries_per_rank": 1454,
+    "union_captured_entries_per_rank": 2516,
+    "median_kv_capacity_loss_fraction": 0.0,
+    "median_reserved_memory_increase_bytes": 0.0,
+    "median_process_to_ready_increase_fraction": 0.217029371143185
+  },
+  "910b": {
+    "default_successes": 3,
+    "union_successes": 0,
+    "union_resource_failures": 3,
+    "default_effective_capture_sizes": 19,
+    "default_acl_wrappers_per_rank": 42,
+    "default_acl_graph_entries_per_rank": 798,
+    "union_error_codes": ["207005", "207005", "207005"],
+    "union_failure_stream_ids": [1984, 1984, 1984]
+  },
+  "protocol_semantic_observation": "910b_resource_exhaustion_a100_complete_capture",
+  "allowed_followup": "new_prospective_graphbudget_gate_only",
+  "forbidden_interpretations": [
+    "G0-M passed",
+    "GraphLease controller restored",
+    "phase-dependent portfolio choice established",
+    "static oracle gap established",
+    "black-box routing insufficiency established"
+  ],
+  "raw_archive_sha256": "7a57242c6c0ff8d94159f74a6a86fa932ed5d648d208c70c273b023f185db498"
+}

@@ -8,13 +8,17 @@ target_venue:
   year: "TBD"
   mode: "experiment_only"
 stage:
-  current: "independent_gl_s0_scale_transfer_resource_audit"
+  current: "graphbudget_candidate_requires_new_prospective_gate"
   gate: "GL-S0"
   updated_at: "2026-08-29"
 artifacts:
   protocol: "docs/G0_PROTOCOL.md"
   config: "configs/g0.json"
   results: "results/g0/"
+  gl_s0_protocol: "docs/GL_S0_PROTOCOL.md"
+  gl_s0_config: "configs/gl_s0.json"
+  gl_s0_report: "docs/GL_S0_REPORT.md"
+  gl_s0_results: "results/gl_s0/"
 claims:
   - id: "GL-C0"
     text: "The efficient resident graph portfolio changes with serving phase on CUDA and CANN runtimes."
@@ -30,7 +34,7 @@ claims:
     status: "not_tested_stopped_before_G0L"
   - id: "GL-S0-C0"
     text: "The same logical graph portfolio has scale-dependent or runtime-dependent physical resource cost at Qwen3-14B TP4."
-    status: "prospective_not_tested"
+    status: "resource_mechanism_observed_frozen_classifier_contract_invalid"
 experiments:
   - id: "G0-P"
     purpose: "A100 and 910B TP1 plan-invariance and observability vertical slice"
@@ -43,4 +47,4 @@ experiments:
     status: "not_run_stopped_on_G0-M"
   - id: "GL-S0"
     purpose: "Independent Qwen3-14B TP4 graph-entry and device-resource scale audit"
-    status: "protocol_defined_not_run"
+    status: "completed_a100_complete_910b_sq_cq_exhaustion_classifier_unregistered_207005"

@@ -1,0 +1,122 @@
+{
+  "continue_graph_resource_research": false,
+  "created_at": "2026-08-28T17:04:26.602916+00:00",
+  "gate": "GL-S0",
+  "graphlease_controller_restored": false,
+  "old_g0m_status_unchanged": true,
+  "platforms": {
+    "910b": {
+      "default_acl_graph_entry_counts": [
+        798,
+        798,
+        798,
+        798,
+        798,
+        798,
+        798,
+        798,
+        798,
+        798,
+        798,
+        798
+      ],
+      "default_acl_wrapper_counts": [
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42,
+        42
+      ],
+      "default_effective_capture_size_counts": [
+        19,
+        19,
+        19
+      ],
+      "default_success_count": 3,
+      "run_statuses": {
+        "coverage_union": [
+          "failed",
+          "failed",
+          "failed"
+        ],
+        "default": [
+          "success",
+          "success",
+          "success"
+        ]
+      },
+      "union_acl_graph_entry_counts": [],
+      "union_acl_wrapper_counts": [],
+      "union_confirmed_resource_failure_count": 0,
+      "union_effective_capture_size_counts": [
+        null,
+        null,
+        null
+      ],
+      "union_exact_capture_count": 0,
+      "union_filtering_count": 0,
+      "union_resource_constraint_count": 0,
+      "union_success_count": 0,
+      "union_unregistered_failure_count": 3
+    },
+    "a100": {
+      "default_acl_graph_entry_counts": [],
+      "default_acl_wrapper_counts": [],
+      "default_effective_capture_size_counts": [
+        35,
+        35,
+        35
+      ],
+      "default_success_count": 3,
+      "median_kv_capacity_loss_fraction": 0.0,
+      "median_per_rank_allocated_memory_increase_bytes_diagnostic": 0.0,
+      "median_per_rank_reserved_memory_increase_bytes": 0.0,
+      "median_process_to_ready_increase_fraction": 0.217029371143185,
+      "paired_kv_capacity_loss_fractions": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "paired_process_to_ready_increase_fractions": [
+        0.08681350625642786,
+        0.27242428613908365,
+        0.217029371143185
+      ],
+      "run_statuses": {
+        "coverage_union": [
+          "success",
+          "success",
+          "success"
+        ],
+        "default": [
+          "success",
+          "success",
+          "success"
+        ]
+      },
+      "scale_stressed": false,
+      "union_acl_graph_entry_counts": [],
+      "union_acl_wrapper_counts": [],
+      "union_confirmed_resource_failure_count": 0,
+      "union_effective_capture_size_counts": [
+        60,
+        60,
+        60
+      ],
+      "union_exact_capture_count": 3,
+      "union_filtering_count": 0,
+      "union_resource_constraint_count": 0,
+      "union_success_count": 3,
+      "union_unregistered_failure_count": 0
+    }
+  },
+  "schema": "graphlease.gl_s0.decision.v1",
+  "verdict": "technical_invalid_or_unregistered_union_failure"
+}
