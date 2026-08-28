@@ -12,8 +12,10 @@ not implement a controller, modify vLLM/vLLM-Ascend, write a kernel, or use the
 - Frozen configuration: `configs/g0.json`
 - Results: `results/g0/`
 
-G0-P passed exact within-platform plan invariance on A100 and 910B. The formal
-G0-M matrix is unblocked; see `docs/G0P_REPORT.md`.
+G0-P passed exact within-platform plan invariance on A100 and 910B. G0-M then
+failed to find a stable phase-dependent optimum, meaningful portfolio scarcity,
+or a static-to-oracle gap. GraphLease is stopped and G0-L was not run. See
+`docs/G0P_REPORT.md` and `docs/G0M_REPORT.md`.
 
 Local checks:
 

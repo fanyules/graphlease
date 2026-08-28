@@ -8,3 +8,8 @@ answering the first three research questions positively.
 
 G0-P passed. Its eight valid rows are in `preflight/`, construction failures are
 in `attempts/`, and the machine verdict is `G0P_DECISION.json`.
+
+G0-M completed all 24 formal runs and both union probes, then returned
+`stop_no_stable_phase_dependent_optimum`. Raw formal and resource evidence is in
+`formal/` and `resource/`; `G0M_DECISION.json` is the machine adjudication.
+G0-L was not run.
