@@ -2,9 +2,9 @@
   "910b_unblocked": true,
   "a100_unblocked": true,
   "config_path": "configs/g0.json",
-  "config_sha256": "b190069545aba1167e6f24af22ffafb45283a51b03e370abd836feae7087fde4",
+  "config_sha256": "0f8624bedcbe4ed68b7c06cc1162d8f42867f36e67d3db949f2af292778c73a8",
   "controller_unblocked": false,
-  "created_at": "2026-08-28T15:02:51.014275+00:00",
+  "created_at": "2026-08-28T15:09:23.295676+00:00",
   "formal_portfolios": [
     "eager",
     "default",
@@ -99,14 +99,14 @@
       ]
     }
   },
-  "pre_output_repository_commit": "f04f3d20d21a1c3e41bc1d7cbfb7fd32fecb40a1",
+  "pre_output_repository_commit": "11fba2d00fc052b3dff06bb0d6a418c3ddebe3a1",
   "protocol_path": "docs/G0_PROTOCOL.md",
-  "protocol_sha256": "afa9fbbfbe7b5e6342fd77e2fe4d6910399b865db3c9de822ba2526f9bff3ad9",
+  "protocol_sha256": "ea8f456144b94819617438d50e46eaad658f48f71987ca6441869e759550a975",
   "resource_probe_portfolio": "coverage_union",
   "schema": "graphlease.g0.freeze.v1",
   "source_sha256": {
     "scripts/adjudicate_g0.py": "5029e723bdf1e9b2909aa96dd7d614930a11826561dde7d1d48eede25e9ce7c7",
-    "scripts/run_g0.py": "b6a9afc92c74e01cddf258abad3bf5c599074a746ec43cedd99b990efd48ed22",
+    "scripts/run_g0.py": "368d89e1f68e3ef9acbb6c615595878b66446b012a4cbb787be9a999ea54d939",
     "src/graphlease/contracts.py": "5878b2ad4d2d16567ebcde176a74d9f2a054390e8bca053c465247c71717ca56",
     "src/graphlease/metrics.py": "7962a4606208148e3aceec989af9ef54cf5157c59488b3afcd219e2c3e753ab8"
   },
