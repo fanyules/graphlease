@@ -8,7 +8,7 @@ target_venue:
   year: "TBD"
   mode: "experiment_only"
 stage:
-  current: "g0_protocol_implementation"
+  current: "g0_formal_matrix"
   gate: "G0"
   updated_at: "2026-08-28"
 artifacts:
@@ -31,10 +31,10 @@ claims:
 experiments:
   - id: "G0-P"
     purpose: "A100 and 910B TP1 plan-invariance and observability vertical slice"
-    status: "not_started"
+    status: "passed"
   - id: "G0-M"
     purpose: "Four-portfolio, two-phase resource and service census"
-    status: "blocked_on_G0-P"
+    status: "ready"
   - id: "G0-L"
     purpose: "Conditional restart-gap and warm-island masking replay"
     status: "blocked_on_G0-M"

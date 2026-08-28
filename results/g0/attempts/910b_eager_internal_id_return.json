@@ -1,0 +1,101 @@
+{
+  "config_sha256": "0f8624bedcbe4ed68b7c06cc1162d8f42867f36e67d3db949f2af292778c73a8",
+  "created_at": "2026-08-28T15:10:31.981815+00:00",
+  "error": "engine returned request 'graphlease-0'; expected one of ['graphlease-0-8114dbac', 'graphlease-1-83b5aa72', 'graphlease-2-a41a83f4', 'graphlease-3-92b47909', 'graphlease-4-985163e5', 'graphlease-5-99ffea8c', 'graphlease-6-ac4ff99c']",
+  "error_type": "RuntimeError",
+  "finished_at": "2026-08-28T15:10:51.565604+00:00",
+  "freeze_sha256": "86a18ef85822d686de9dd5d916bb33e2de615735bf2883efee30d5bdce3708bd",
+  "mode": "preflight",
+  "model_config_sha256": "ccab64509720369255226efaf36c75655195fa6bfd27ed48143cc55d4e7107fc",
+  "model_init_ms": 19409.71248,
+  "physical_device": "NPU-0-0000:C1:00.0",
+  "platform": "910b",
+  "portfolio": "eager",
+  "process_to_ready_ms": 36903.91218,
+  "prompt_token_pool": [
+    11212,
+    2304,
+    519,
+    5791,
+    942,
+    264,
+    8356,
+    13480,
+    1681,
+    311,
+    6629,
+    4771,
+    19565,
+    47508,
+    7049,
+    13
+  ],
+  "repository_commit": "a95428ad0aede7973d372586a409acf9ab9cb5b0",
+  "requested_compilation_config": {
+    "cudagraph_mode": "NONE",
+    "mode": "none"
+  },
+  "resolved_runtime": {
+    "attention_backend": "None",
+    "cache": {
+      "block_size": 128,
+      "gpu_memory_utilization": 0.8,
+      "kv_token_capacity": 422912,
+      "num_gpu_blocks": 3304
+    },
+    "compilation": {
+      "backend": "vllm_ascend.compilation.compiler_interface.AscendCompiler",
+      "cudagraph_capture_sizes": [],
+      "cudagraph_mode": "NONE",
+      "max_cudagraph_capture_size": 0,
+      "mode": "0"
+    },
+    "scheduler": {
+      "max_num_batched_tokens": 4096,
+      "max_num_seqs": 128
+    }
+  },
+  "resource_after_init": [
+    {
+      "acl_graph_entry_count": 0,
+      "acl_wrapper_count": 0,
+      "allocated_bytes": 51997393920,
+      "compilation_counter": {
+        "num_aot_artifacts_loaded": 0,
+        "num_aot_artifacts_saved": 0,
+        "num_aot_compiles": 0,
+        "num_backend_compilations": 0,
+        "num_cache_entries_updated": 0,
+        "num_compiled_artifacts_loaded": 0,
+        "num_compiled_artifacts_saved": 0,
+        "num_cudagraph_captured": 0,
+        "num_eager_compiles": 0,
+        "num_gpu_runner_capture_triggers": 0,
+        "num_graphs_seen": 0,
+        "num_inductor_compiles": 0,
+        "num_models_seen": 0,
+        "num_piecewise_capturable_graphs_seen": 0,
+        "num_piecewise_graphs_seen": 0
+      },
+      "device_type": "npu",
+      "free_bytes": 12486737920,
+      "rank": 0,
+      "reserved_bytes": 52367982592,
+      "total_bytes": 65452113920
+    }
+  ],
+  "restart_index": 0,
+  "runtime": {
+    "hostname": "node1",
+    "pid": 1685390,
+    "python": "3.12.13",
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post2",
+    "vllm": "0.23.0",
+    "vllm_ascend": "0.23.0rc1"
+  },
+  "schema": "graphlease.g0.run.v1",
+  "status": "failed",
+  "total_process_ms": 37075.026112,
+  "traceback": "Traceback (most recent call last):\n  File \"/data/GraphLease/scripts/run_g0.py\", line 650, in execute\n    result = run_wave(\n             ^^^^^^^^^\n  File \"/data/GraphLease/scripts/run_g0.py\", line 398, in run_wave\n    raise RuntimeError(\nRuntimeError: engine returned request 'graphlease-0'; expected one of ['graphlease-0-8114dbac', 'graphlease-1-83b5aa72', 'graphlease-2-a41a83f4', 'graphlease-3-92b47909', 'graphlease-4-985163e5', 'graphlease-5-99ffea8c', 'graphlease-6-ac4ff99c']\n"
+}

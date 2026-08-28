@@ -1,0 +1,612 @@
+{
+  "config_sha256": "0f8624bedcbe4ed68b7c06cc1162d8f42867f36e67d3db949f2af292778c73a8",
+  "created_at": "2026-08-28T15:12:50.243553+00:00",
+  "engine_idle_after_run": true,
+  "finished_at": "2026-08-28T15:13:12.182787+00:00",
+  "freeze_sha256": "0f2e00ad4bab4f4d515cb27b57285bb897b6cf45a30866f2c8d1a1b7c1ff5efb",
+  "mode": "preflight",
+  "model_config_sha256": "ccab64509720369255226efaf36c75655195fa6bfd27ed48143cc55d4e7107fc",
+  "model_init_ms": 19677.643606,
+  "physical_device": "NPU-0-0000:C1:00.0",
+  "platform": "910b",
+  "portfolio": "eager",
+  "preflight_cases": [
+    {
+      "case": {
+        "concurrency": 7,
+        "output_tokens": 16,
+        "phase": "low_short"
+      },
+      "dispatch": {
+        "dispatch_consistent": true,
+        "dispatch_mode_counts": {
+          "NONE": 16
+        },
+        "dispatch_mode_fraction": {
+          "NONE": 1.0
+        },
+        "dispatch_rows": [
+          {
+            "num_padded_tokens": 448,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 448,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 7,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 7,
+            "runtime_mode": "NONE"
+          }
+        ],
+        "scheduler_stats": [],
+        "total_padded_tokens": 553,
+        "total_padding_tokens": 0,
+        "total_unpadded_tokens": 553,
+        "worker_dispatch": [
+          {
+            "rank": 0,
+            "rows": [
+              {
+                "num_padded_tokens": 448,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 448,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 7,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 7,
+                "runtime_mode": "NONE"
+              }
+            ],
+            "source": "runner_method"
+          }
+        ]
+      },
+      "output_digest": "6363db19e03123c8db777578319e35053d6236babe13e632e335a84d24a103c1"
+    },
+    {
+      "case": {
+        "concurrency": 63,
+        "output_tokens": 16,
+        "phase": "high_long"
+      },
+      "dispatch": {
+        "dispatch_consistent": true,
+        "dispatch_mode_counts": {
+          "NONE": 19
+        },
+        "dispatch_mode_fraction": {
+          "NONE": 1.0
+        },
+        "dispatch_rows": [
+          {
+            "num_padded_tokens": 4096,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 4096,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 4096,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 4096,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 4096,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 4096,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 3934,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 3934,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 63,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 63,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 47,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 47,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 32,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 32,
+            "runtime_mode": "NONE"
+          },
+          {
+            "num_padded_tokens": 16,
+            "num_paddings": 0,
+            "num_unpadded_tokens": 16,
+            "runtime_mode": "NONE"
+          }
+        ],
+        "scheduler_stats": [],
+        "total_padded_tokens": 17073,
+        "total_padding_tokens": 0,
+        "total_unpadded_tokens": 17073,
+        "worker_dispatch": [
+          {
+            "rank": 0,
+            "rows": [
+              {
+                "num_padded_tokens": 4096,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 4096,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 4096,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 4096,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 4096,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 4096,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 3934,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 3934,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 63,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 63,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 47,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 47,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 32,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 32,
+                "runtime_mode": "NONE"
+              },
+              {
+                "num_padded_tokens": 16,
+                "num_paddings": 0,
+                "num_unpadded_tokens": 16,
+                "runtime_mode": "NONE"
+              }
+            ],
+            "source": "runner_method"
+          }
+        ]
+      },
+      "output_digest": "740277d325c568351c331501833523f6c3b9506cf3a002ccd221fb3cd187e718"
+    }
+  ],
+  "process_to_ready_ms": 37341.844156,
+  "prompt_token_pool": [
+    11212,
+    2304,
+    519,
+    5791,
+    942,
+    264,
+    8356,
+    13480,
+    1681,
+    311,
+    6629,
+    4771,
+    19565,
+    47508,
+    7049,
+    13
+  ],
+  "repository_commit": "4a9cd771efbba342110ebbea0b3ff9b66c0dc803",
+  "requested_compilation_config": {
+    "cudagraph_mode": "NONE",
+    "mode": "none"
+  },
+  "resolved_runtime": {
+    "attention_backend": "None",
+    "cache": {
+      "block_size": 128,
+      "gpu_memory_utilization": 0.8,
+      "kv_token_capacity": 422912,
+      "num_gpu_blocks": 3304
+    },
+    "compilation": {
+      "backend": "vllm_ascend.compilation.compiler_interface.AscendCompiler",
+      "cudagraph_capture_sizes": [],
+      "cudagraph_mode": "NONE",
+      "max_cudagraph_capture_size": 0,
+      "mode": "0"
+    },
+    "scheduler": {
+      "max_num_batched_tokens": 4096,
+      "max_num_seqs": 128
+    }
+  },
+  "resource_after_init": [
+    {
+      "acl_graph_entry_count": 0,
+      "acl_wrapper_count": 0,
+      "allocated_bytes": 51997393920,
+      "compilation_counter": {
+        "num_aot_artifacts_loaded": 0,
+        "num_aot_artifacts_saved": 0,
+        "num_aot_compiles": 0,
+        "num_backend_compilations": 0,
+        "num_cache_entries_updated": 0,
+        "num_compiled_artifacts_loaded": 0,
+        "num_compiled_artifacts_saved": 0,
+        "num_cudagraph_captured": 0,
+        "num_eager_compiles": 0,
+        "num_gpu_runner_capture_triggers": 0,
+        "num_graphs_seen": 0,
+        "num_inductor_compiles": 0,
+        "num_models_seen": 0,
+        "num_piecewise_capturable_graphs_seen": 0,
+        "num_piecewise_graphs_seen": 0
+      },
+      "device_type": "npu",
+      "free_bytes": 12486701056,
+      "rank": 0,
+      "reserved_bytes": 52367982592,
+      "total_bytes": 65452113920
+    }
+  ],
+  "resource_after_run": [
+    {
+      "acl_graph_entry_count": 0,
+      "acl_wrapper_count": 0,
+      "allocated_bytes": 52001589248,
+      "compilation_counter": {
+        "num_aot_artifacts_loaded": 0,
+        "num_aot_artifacts_saved": 0,
+        "num_aot_compiles": 0,
+        "num_backend_compilations": 0,
+        "num_cache_entries_updated": 0,
+        "num_compiled_artifacts_loaded": 0,
+        "num_compiled_artifacts_saved": 0,
+        "num_cudagraph_captured": 0,
+        "num_eager_compiles": 0,
+        "num_gpu_runner_capture_triggers": 0,
+        "num_graphs_seen": 0,
+        "num_inductor_compiles": 0,
+        "num_models_seen": 0,
+        "num_piecewise_capturable_graphs_seen": 0,
+        "num_piecewise_graphs_seen": 0
+      },
+      "device_type": "npu",
+      "free_bytes": 12184944640,
+      "rank": 0,
+      "reserved_bytes": 52728692736,
+      "total_bytes": 65452113920
+    }
+  ],
+  "restart_index": 0,
+  "runtime": {
+    "hostname": "node1",
+    "pid": 1685607,
+    "python": "3.12.13",
+    "torch": "2.10.0+cpu",
+    "torch_npu": "2.10.0.post2",
+    "vllm": "0.23.0",
+    "vllm_ascend": "0.23.0rc1"
+  },
+  "schema": "graphlease.g0.run.v1",
+  "status": "success",
+  "total_process_ms": 39600.39137
+}
