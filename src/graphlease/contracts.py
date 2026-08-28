@@ -5,7 +5,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 FORMAL_PORTFOLIOS = ("eager", "default", "small_dense", "large_dense")
 PHASES = ("low_short", "high_long")
 

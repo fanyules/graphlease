@@ -2,23 +2,21 @@
 from __future__ import annotations
 
 import argparse
-from collections import defaultdict
-from datetime import datetime, timezone
 import json
-from pathlib import Path
 import random
 import statistics
 import subprocess
 import sys
-from typing import Any, Callable
-
+from collections.abc import Callable
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPOSITORY_ROOT / "src"))
 
 from graphlease.contracts import FORMAL_PORTFOLIOS, PHASES, load_config, sha256
 from graphlease.metrics import percentile
-
 
 GRAPH_PORTFOLIOS = ("default", "small_dense", "large_dense")
 

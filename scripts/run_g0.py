@@ -2,22 +2,21 @@
 from __future__ import annotations
 
 import argparse
-from collections import Counter
 import dataclasses
-from datetime import datetime, timezone
 import importlib.metadata
 import json
-import math
 import os
-from pathlib import Path
 import socket
 import statistics
 import subprocess
 import sys
 import time
 import traceback
-from typing import Any, Callable
-
+from collections import Counter
+from collections.abc import Callable
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
 
 PROCESS_STARTED_NS = time.perf_counter_ns()
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
@@ -703,7 +702,7 @@ def execute(args: argparse.Namespace) -> dict[str, Any]:
         )
         payload["engine_idle_after_run"] = not llm.llm_engine.has_unfinished_requests()
         payload["status"] = "success" if payload["engine_idle_after_run"] else "failed"
-    except BaseException as error:
+    except Exception as error:  # noqa: BLE001 - preserve external runtime failures
         payload["status"] = "failed"
         payload["error_type"] = type(error).__name__
         payload["error"] = str(error)
@@ -724,7 +723,7 @@ def main() -> int:
         raise FileExistsError(f"refusing to overwrite {args.output}")
     try:
         payload = execute(args)
-    except BaseException as error:
+    except Exception as error:  # noqa: BLE001 - always emit a failed-run artifact
         payload = {
             "schema": "graphlease.g0.run.v1",
             "created_at": datetime.now(timezone.utc).isoformat(),

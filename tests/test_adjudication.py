@@ -1,13 +1,13 @@
-from pathlib import Path
 import sys
 import unittest
-
+from pathlib import Path
 
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPOSITORY_ROOT / "src"))
 sys.path.insert(0, str(REPOSITORY_ROOT / "scripts"))
 
 from adjudicate_g0 import adjudicate_formal, adjudicate_preflight
+
 from graphlease.contracts import FORMAL_PORTFOLIOS, PHASES, load_config
 
 
