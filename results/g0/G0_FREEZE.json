@@ -1,0 +1,114 @@
+{
+  "910b_unblocked": true,
+  "a100_unblocked": true,
+  "config_path": "configs/g0.json",
+  "config_sha256": "b190069545aba1167e6f24af22ffafb45283a51b03e370abd836feae7087fde4",
+  "controller_unblocked": false,
+  "created_at": "2026-08-28T15:02:51.014275+00:00",
+  "formal_portfolios": [
+    "eager",
+    "default",
+    "small_dense",
+    "large_dense"
+  ],
+  "model": {
+    "asset_id": "Qwen/Qwen3-1.7B",
+    "deployed_path": "/data/models/qwen/Qwen3-1.7B",
+    "dtype": "bfloat16",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "phases": {
+    "high_long": {
+      "instrumented_wave_concurrency": [
+        33,
+        39,
+        45,
+        51,
+        57,
+        63,
+        69,
+        75,
+        81,
+        87,
+        93,
+        99,
+        105,
+        111,
+        117,
+        123
+      ],
+      "output_tokens": 128,
+      "prompt_tokens": 256,
+      "wave_concurrency": [
+        33,
+        39,
+        45,
+        51,
+        57,
+        63,
+        69,
+        75,
+        81,
+        87,
+        93,
+        99,
+        105,
+        111,
+        117,
+        123
+      ]
+    },
+    "low_short": {
+      "instrumented_wave_concurrency": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        6,
+        10,
+        14,
+        4,
+        8,
+        12,
+        16,
+        5,
+        11
+      ],
+      "output_tokens": 32,
+      "prompt_tokens": 64,
+      "wave_concurrency": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        6,
+        10,
+        14,
+        4,
+        8,
+        12,
+        16,
+        5,
+        11
+      ]
+    }
+  },
+  "pre_output_repository_commit": "f04f3d20d21a1c3e41bc1d7cbfb7fd32fecb40a1",
+  "protocol_path": "docs/G0_PROTOCOL.md",
+  "protocol_sha256": "afa9fbbfbe7b5e6342fd77e2fe4d6910399b865db3c9de822ba2526f9bff3ad9",
+  "resource_probe_portfolio": "coverage_union",
+  "schema": "graphlease.g0.freeze.v1",
+  "source_sha256": {
+    "scripts/adjudicate_g0.py": "5029e723bdf1e9b2909aa96dd7d614930a11826561dde7d1d48eede25e9ce7c7",
+    "scripts/run_g0.py": "b6a9afc92c74e01cddf258abad3bf5c599074a746ec43cedd99b990efd48ed22",
+    "src/graphlease/contracts.py": "5878b2ad4d2d16567ebcde176a74d9f2a054390e8bca053c465247c71717ca56",
+    "src/graphlease/metrics.py": "7962a4606208148e3aceec989af9ef54cf5157c59488b3afcd219e2c3e753ab8"
+  },
+  "status": "frozen"
+}
