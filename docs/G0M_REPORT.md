@@ -97,8 +97,12 @@ The correct project decision is therefore:
 ## Evidence
 
 - machine decision: `results/g0/G0M_DECISION.json`;
-- 24 formal fresh-process runs: `results/g0/formal/`;
-- two union resource probes: `results/g0/resource/`;
+- machine-decision SHA-256:
+  `b7444191ef1f89e1ddff515e28d1aacf48e68df04c0113f3b1f0dce2e990bdb9`;
+- `results/g0/G0M_RAW.tar.gz` contains all 24 formal fresh-process runs,
+  their logs, and both union resource probes;
+- raw-archive SHA-256:
+  `42d48c0f0af06ff3dc4c6f4203969efeddd27e661b500ee55e3a8b98178e7752`;
 - G0-P evidence and retained construction failures: `results/g0/preflight/` and
   `results/g0/attempts/`.
 
