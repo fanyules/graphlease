@@ -54,6 +54,13 @@ restart. Each phase has one untimed warm-up wave, one uninstrumented formal
 trace, and one separate instrumented replay. Profiler or dispatch hooks never
 contribute timing evidence.
 
+The timing driver submits pre-tokenized requests through public
+`LLMEngine.add_request()` with cumulative output enabled. `LLM.enqueue()` is not
+used because vLLM 0.23 intentionally converts that offline convenience path to
+final-only output, which cannot expose TTFT. On A100, the frozen environment
+handoff's existing `qwen36-shard/bin` PATH prefix supplies `ninja` for FlashInfer
+JIT; the Python interpreter remains `rimlink-vllm023`.
+
 ## Portfolios
 
 Four portfolios enter service comparison:

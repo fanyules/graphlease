@@ -6,6 +6,7 @@ import dataclasses
 import importlib.metadata
 import json
 import os
+import shutil
 import socket
 import statistics
 import subprocess
@@ -19,6 +20,7 @@ from pathlib import Path
 from typing import Any
 
 PROCESS_STARTED_NS = time.perf_counter_ns()
+REQUEST_COUNTER = 0
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPOSITORY_ROOT / "src"))
 
@@ -340,8 +342,9 @@ def prompts(concurrency: int, prompt_tokens: int, pool: list[int]) -> list[dict[
 
 def sampling_params(output_tokens: int, seed: int) -> Any:
     from vllm import SamplingParams
+    from vllm.sampling_params import RequestOutputKind
 
-    return SamplingParams(
+    value = SamplingParams(
         temperature=0.0,
         top_p=1.0,
         ignore_eos=True,
@@ -349,6 +352,8 @@ def sampling_params(output_tokens: int, seed: int) -> Any:
         detokenize=False,
         seed=seed,
     )
+    value.output_kind = RequestOutputKind.CUMULATIVE
+    return value
 
 
 def run_wave(
@@ -361,15 +366,21 @@ def run_wave(
     seed: int,
     wave_index: int,
 ) -> dict[str, Any]:
+    global REQUEST_COUNTER
+
     if llm.llm_engine.has_unfinished_requests():
         raise RuntimeError("wave started while the engine was not idle")
-    request_ids = list(
-        llm.enqueue(
-            prompts(concurrency, prompt_tokens, pool),
-            sampling_params(output_tokens, seed),
-            use_tqdm=False,
+    request_ids = []
+    for position, prompt in enumerate(prompts(concurrency, prompt_tokens, pool)):
+        request_id = f"graphlease-{REQUEST_COUNTER}"
+        REQUEST_COUNTER += 1
+        request_ids.append(
+            llm.llm_engine.add_request(
+                request_id,
+                prompt,
+                sampling_params(output_tokens, seed + position),
+            )
         )
-    )
     positions = {str(request_id): index for index, request_id in enumerate(request_ids)}
     first_token_ns: dict[str, int] = {}
     finished_ns: dict[str, int] = {}
@@ -384,7 +395,10 @@ def run_wave(
         for output in outputs:
             request_id = str(output.request_id)
             if request_id not in positions:
-                raise RuntimeError("engine returned a request from another wave")
+                raise RuntimeError(
+                    f"engine returned request {request_id!r}; expected one of "
+                    f"{sorted(positions)!r}"
+                )
             if not output.outputs:
                 continue
             sequence = output.outputs[0]
@@ -561,10 +575,14 @@ def execute(args: argparse.Namespace) -> dict[str, Any]:
             "vllm_ascend": package_version("vllm-ascend"),
         }
     else:
+        if shutil.which("ninja") is None:
+            raise RuntimeError(
+                "A100 runtime requires ninja on PATH for the existing FlashInfer sampler"
+            )
         if torch.cuda.device_count() != 1:
             raise RuntimeError("GraphLease requires exactly one visible CUDA GPU")
         torch.cuda.set_device(0)
-        runtime_extra = {"cuda": torch.version.cuda}
+        runtime_extra = {"cuda": torch.version.cuda, "ninja": shutil.which("ninja")}
 
     portfolio = config["portfolios"][args.portfolio]
     requested_compilation = compilation_config(config, args.portfolio)

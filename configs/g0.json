@@ -14,6 +14,7 @@
     "a100": {
       "tensor_parallel_size": 1,
       "device_index": 0,
+      "required_path_prefix": "/root/miniconda3/envs/qwen36-shard/bin",
       "runtime": "vllm-0.23.0-cuda"
     },
     "910b": {
