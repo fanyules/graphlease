@@ -1,0 +1,85 @@
+{
+  "schema": "graphlease.gb_q0.v1",
+  "project": "GraphBudget qualification inside GraphLease evidence repository",
+  "gate": "GB-Q0",
+  "evidence_scope": "stack qualification only; no performance or paper evidence",
+  "prior_evidence": {
+    "gl_s0_frozen_decision_path": "results/gl_s0/GL_S0_DECISION_FROZEN.json",
+    "gl_s0_frozen_decision_sha256": "0da18f4b2aef40c5efb8f198d2f71f8fd14bff77869e3577543399c1a5082e78",
+    "must_remain_unmodified": true
+  },
+  "official_stack": {
+    "driver_version": "25.5.1",
+    "driver_package_version": "25.5.1",
+    "driver_package_sha256": "1573563e63cb893cf3049ae31259eb8d6c31ec859be82c3c4a9c5846eea372b5",
+    "firmware_version": "7.8.0.6.201",
+    "firmware_package_version": "25.5.1",
+    "firmware_package_sha256": "71eedecfefab922054c80496ea025a1824c085dbea2ad3405d4ef5727eb3092e",
+    "cann_version": "9.1.0",
+    "torch_version": "2.10.0",
+    "torch_npu_version": "2.10.0.post4",
+    "vllm_version": "0.23.0",
+    "vllm_ascend_version": "0.23.0",
+    "image": "quay.io/ascend/vllm-ascend:v0.23.0",
+    "image_arm64_manifest_digest": "sha256:4ee78def8f33d59d48f116d1dfa793332c23c99ecab4f0d7dd5cd62d0fb4e6c1",
+    "image_archive_sha256": "e53201b595f3abcc8c873c3961f16b84d85998bf94a363691f32040dfdb4f36c"
+  },
+  "model": {
+    "asset_id": "Qwen3-14B-BF16",
+    "deployed_path": "/data/models/qwen/Qwen3-14B-BF16",
+    "config_sha256": "e73c3664ca09b10a673fef0c22e8a6b456201d49bd4713c9691f775720e8857a",
+    "dtype": "bfloat16",
+    "num_hidden_layers": 40
+  },
+  "platform": {
+    "name": "910b",
+    "tensor_parallel_size": 1,
+    "physical_devices_by_restart": [0, 1, 2]
+  },
+  "engine": {
+    "max_model_len": 768,
+    "max_num_seqs": 128,
+    "max_num_batched_tokens": 4096,
+    "gpu_memory_utilization": 0.8,
+    "enable_prefix_caching": false,
+    "async_scheduling": false,
+    "engine_core_multiprocessing": false,
+    "seed": 2026082902
+  },
+  "portfolios": {
+    "default": {
+      "capture_sizes": null
+    },
+    "u60": {
+      "capture_sizes": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80, 84, 88, 92, 96, 100, 104, 108, 112, 116, 120, 124, 128, 160, 192, 224, 256]
+    }
+  },
+  "execution": {
+    "fresh_processes": 3,
+    "trial_order": ["default_pre", "u60", "default_recovery_if_u60_failed"],
+    "default_recovery_required_after_any_u60_failure": true,
+    "workload_requests": 0,
+    "performance_timing_admissible": false
+  },
+  "recovery": {
+    "graph_structure_must_match_default_pre": true,
+    "kv_capacity_loss_fraction_max": 0.01
+  },
+  "composite_resource_signature": {
+    "match": "all",
+    "required_substrings": [
+      "AclmdlRICaptureBegin",
+      "207005",
+      "Alloc sq cq fail",
+      "0x7020023",
+      "resource alloc fail"
+    ],
+    "boundary_regex": "stream_id=([0-9]+)"
+  },
+  "decision": {
+    "u60_success_3_of_3": "stop_graphbudget_old_stack_limitation",
+    "u60_composite_failure_3_of_3_same_boundary_and_default_recovers": "confirm_cross_runtime_resource_cliff",
+    "mixed_outcomes_or_boundary_changes": "stop_runtime_instability",
+    "tp1_success_with_prior_tp4_failure": "stop_not_general_graphbudget"
+  }
+}

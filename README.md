@@ -29,10 +29,16 @@ SQ/CQ allocation boundary (`stream_id=1984`). The frozen automated classifier
 did not register error code `207005`, so its technical-invalid verdict is
 retained alongside a separate semantic audit. See `docs/GL_S0_REPORT.md`.
 
+GB-Q0 is the only active follow-up. It replaces the old stack with the current
+official vLLM-Ascend compatibility row and runs Qwen3-14B BF16 TP1 as a
+zero-request stack qualification. It does not run performance or create a
+GraphBudget system. See `docs/GB_Q0_PROTOCOL.md`.
+
 Local checks:
 
 ```bash
 python -m unittest discover -s tests -v
 python scripts/freeze_g0.py --output /tmp/graphlease-freeze.json
 python scripts/freeze_gl_s0.py --output /tmp/gl-s0-freeze.json
+python scripts/freeze_gb_q0.py --output /tmp/gb-q0-freeze.json
 ```

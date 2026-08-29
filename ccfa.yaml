@@ -8,8 +8,8 @@ target_venue:
   year: "TBD"
   mode: "experiment_only"
 stage:
-  current: "graphbudget_candidate_requires_new_prospective_gate"
-  gate: "GL-S0"
+  current: "gb_q0_official_stack_qualification"
+  gate: "GB-Q0"
   updated_at: "2026-08-29"
 artifacts:
   protocol: "docs/G0_PROTOCOL.md"
@@ -19,6 +19,9 @@ artifacts:
   gl_s0_config: "configs/gl_s0.json"
   gl_s0_report: "docs/GL_S0_REPORT.md"
   gl_s0_results: "results/gl_s0/"
+  gb_q0_protocol: "docs/GB_Q0_PROTOCOL.md"
+  gb_q0_config: "configs/gb_q0.json"
+  gb_q0_results: "results/gb_q0/"
 claims:
   - id: "GL-C0"
     text: "The efficient resident graph portfolio changes with serving phase on CUDA and CANN runtimes."
@@ -48,3 +51,6 @@ experiments:
   - id: "GL-S0"
     purpose: "Independent Qwen3-14B TP4 graph-entry and device-resource scale audit"
     status: "completed_a100_complete_910b_sq_cq_exhaustion_classifier_unregistered_207005"
+  - id: "GB-Q0"
+    purpose: "Official HDK 25.5.1 and vLLM-Ascend 0.23.0 TP1 stack qualification"
+    status: "protocol_implementation_ready_stack_staging"
