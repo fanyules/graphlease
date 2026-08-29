@@ -1,0 +1,62 @@
+{
+  "composite_resource_signature": {
+    "boundary_regex": "stream_id=([0-9]+)",
+    "match": "all",
+    "required_substrings": [
+      "AclmdlRICaptureBegin",
+      "207005",
+      "Alloc sq cq fail",
+      "0x7020023",
+      "resource alloc fail"
+    ]
+  },
+  "config_path": "configs/gb_q0.json",
+  "config_sha256": "cdb511a0230087d5dec6c0158eee53ef6a56d6c54e6a21016cfd468ad58c5fd9",
+  "created_at": "2026-08-29T01:26:31.207756+00:00",
+  "graphbudget_repository_unblocked": false,
+  "matrix": {
+    "default_recovery_after_failure": true,
+    "fresh_u60_processes": 3,
+    "physical_devices_by_restart": [
+      0,
+      1,
+      2
+    ],
+    "tensor_parallel_size": 1,
+    "trial_order": [
+      "default_pre",
+      "u60",
+      "default_recovery_if_u60_failed"
+    ]
+  },
+  "official_stack": {
+    "cann_version": "9.1.0",
+    "driver_package_sha256": "1573563e63cb893cf3049ae31259eb8d6c31ec859be82c3c4a9c5846eea372b5",
+    "driver_package_version": "25.5.1",
+    "driver_version": "25.5.1",
+    "firmware_package_sha256": "71eedecfefab922054c80496ea025a1824c085dbea2ad3405d4ef5727eb3092e",
+    "firmware_package_version": "25.5.1",
+    "firmware_version": "7.8.0.6.201",
+    "image": "quay.io/ascend/vllm-ascend:v0.23.0",
+    "image_archive_sha256": "e53201b595f3abcc8c873c3961f16b84d85998bf94a363691f32040dfdb4f36c",
+    "image_arm64_manifest_digest": "sha256:4ee78def8f33d59d48f116d1dfa793332c23c99ecab4f0d7dd5cd62d0fb4e6c1",
+    "torch_npu_version": "2.10.0.post4",
+    "torch_version": "2.10.0",
+    "vllm_ascend_version": "0.23.0",
+    "vllm_version": "0.23.0"
+  },
+  "performance_unblocked": false,
+  "pre_output_repository_commit": "e8a7b8c0dc5ff0ff703b73954c99655c273aa948",
+  "prior_gl_s0_decision_sha256": "0da18f4b2aef40c5efb8f198d2f71f8fd14bff77869e3577543399c1a5082e78",
+  "protocol_path": "docs/GB_Q0_PROTOCOL.md",
+  "protocol_sha256": "f7d505f5cccf47c34f7ba9fb2b13043d223d49527f8a00b2db33cb5232710a95",
+  "router_unblocked": false,
+  "schema": "graphlease.gb_q0.freeze.v1",
+  "source_sha256": {
+    "scripts/adjudicate_gb_q0.py": "be8dd1404f64fb1abfefdd2256a6d2c19574855ac1fffa727ebac43810e62821",
+    "scripts/run_gb_q0.py": "bc80da9396cf3351aec6b73cb719b128cf983aa94d551e006e56b4d34f2f69a2",
+    "scripts/run_gb_q0_trial.py": "c23190d676ac4a994f3e080eb1d5cdfc3497a88029583db25d635c807c405071",
+    "src/graphlease/gb_q0.py": "22533d070446a339ed3b17492eb2a8edf33ff6de7781284c39c5dd5cd0d7e1a7"
+  },
+  "status": "frozen"
+}
