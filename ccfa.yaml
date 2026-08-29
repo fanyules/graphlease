@@ -8,7 +8,7 @@ target_venue:
   year: "TBD"
   mode: "experiment_only"
 stage:
-  current: "gb_q0_official_stack_qualification"
+  current: "stopped_gb_q0_old_stack_limitation"
   gate: "GB-Q0"
   updated_at: "2026-08-29"
 artifacts:
@@ -22,6 +22,7 @@ artifacts:
   gb_q0_protocol: "docs/GB_Q0_PROTOCOL.md"
   gb_q0_config: "configs/gb_q0.json"
   gb_q0_results: "results/gb_q0/"
+  gb_q0_report: "docs/GB_Q0_REPORT.md"
 claims:
   - id: "GL-C0"
     text: "The efficient resident graph portfolio changes with serving phase on CUDA and CANN runtimes."
@@ -37,7 +38,7 @@ claims:
     status: "not_tested_stopped_before_G0L"
   - id: "GL-S0-C0"
     text: "The same logical graph portfolio has scale-dependent or runtime-dependent physical resource cost at Qwen3-14B TP4."
-    status: "resource_mechanism_observed_frozen_classifier_contract_invalid"
+    status: "observed_on_old_hdk25_2_3_stack_not_reproduced_on_current_official_stack"
 experiments:
   - id: "G0-P"
     purpose: "A100 and 910B TP1 plan-invariance and observability vertical slice"
@@ -53,4 +54,4 @@ experiments:
     status: "completed_a100_complete_910b_sq_cq_exhaustion_classifier_unregistered_207005"
   - id: "GB-Q0"
     purpose: "Official HDK 25.5.1 and vLLM-Ascend 0.23.0 TP1 stack qualification"
-    status: "protocol_implementation_ready_stack_staging"
+    status: "completed_u60_3_of_3_stop_graphbudget_old_stack_limitation"

@@ -1,0 +1,126 @@
+{
+  "continue_to_gb_g0o_design": false,
+  "counts": {
+    "default_pre_success": 3,
+    "default_recovery_equivalent": 0,
+    "default_recovery_success": 0,
+    "present_runs": 6,
+    "stack_valid_runs": 6,
+    "u60_composite_resource_failure": 0,
+    "u60_exact_capture": 3,
+    "u60_success": 3
+  },
+  "created_at": "2026-08-29T01:37:44.771650+00:00",
+  "default_pre_fingerprints": [
+    {
+      "acl_graph_entry_count": 798,
+      "acl_wrapper_count": 42,
+      "effective_capture_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128
+      ],
+      "kv_token_capacity": 135424
+    },
+    {
+      "acl_graph_entry_count": 798,
+      "acl_wrapper_count": 42,
+      "effective_capture_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128
+      ],
+      "kv_token_capacity": 135424
+    },
+    {
+      "acl_graph_entry_count": 798,
+      "acl_wrapper_count": 42,
+      "effective_capture_sizes": [
+        1,
+        2,
+        4,
+        8,
+        16,
+        24,
+        32,
+        40,
+        48,
+        56,
+        64,
+        72,
+        80,
+        88,
+        96,
+        104,
+        112,
+        120,
+        128
+      ],
+      "kv_token_capacity": 135424
+    }
+  ],
+  "default_recovery_fingerprints": [
+    null,
+    null,
+    null
+  ],
+  "gate": "GB-Q0",
+  "gl_s0_frozen_decision_unchanged": true,
+  "graphbudget_repository_unblocked": false,
+  "schema": "graphlease.gb_q0.decision.v1",
+  "statuses": {
+    "default_pre": [
+      "success",
+      "success",
+      "success"
+    ],
+    "default_recovery": [
+      "missing",
+      "missing",
+      "missing"
+    ],
+    "u60": [
+      "success",
+      "success",
+      "success"
+    ]
+  },
+  "u60_failure_boundaries": [
+    null,
+    null,
+    null
+  ],
+  "verdict": "stop_graphbudget_old_stack_limitation"
+}

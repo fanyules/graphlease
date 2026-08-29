@@ -34,6 +34,11 @@ official vLLM-Ascend compatibility row and runs Qwen3-14B BF16 TP1 as a
 zero-request stack qualification. It does not run performance or create a
 GraphBudget system. See `docs/GB_Q0_PROTOCOL.md`.
 
+GB-Q0 completed with default and U60 both succeeding in 3/3 fresh processes.
+The current official stack materialized all 2,516 U60 entries, so the frozen
+decision is to stop GraphBudget as an old-stack/old-TP-path limitation. See
+`docs/GB_Q0_REPORT.md`.
+
 Local checks:
 
 ```bash
